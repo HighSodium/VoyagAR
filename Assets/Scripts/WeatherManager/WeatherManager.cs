@@ -6,15 +6,18 @@ using TMPro;
 using UnityEngine.Networking;
 
 public class WeatherManager : MonoBehaviour
-{
-    //public string weatherAPI = "api.openweathermap.org/data/2.5/weather?q=London,uk&appid=16b632699a5b299cfd0723abf35b5b3a";
-    public TextMeshProUGUI location;
-    public TextMeshProUGUI weather;
-    //public TextMeshProUGUI mainWeather;
-    //public TextMeshProUGUI description;
-    public TextMeshProUGUI geoLocation;
 
-    public TMP_InputField cityName; // User input in UI
+    //public TextMeshProUGUI location;
+    public string location;
+    //public TextMeshProUGUI weather;
+    public string weather;
+    //public TextMeshProUGUI geoLocation;
+    public string geoLocation;
+
+    //public TMP_InputField cityName; // User input in UI
+    public string cityName;
+
+
 
     public void GetJsonData()
     {
@@ -23,7 +26,7 @@ public class WeatherManager : MonoBehaviour
 
     IEnumerator RequestWeatherData()
     {
-        string weatherAPI = "api.openweathermap.org/data/2.5/weather?q=" + cityName.text + "&appid=16b632699a5b299cfd0723abf35b5b3a";
+        string weatherAPI = "api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=16b632699a5b299cfd0723abf35b5b3a"; //cityName.text
         print(weatherAPI);
 
         using (UnityWebRequest webData = UnityWebRequest.Get(weatherAPI))
@@ -46,9 +49,9 @@ public class WeatherManager : MonoBehaviour
                     }
                     else
                     {
-                        location.text = response["name"];
-                        weather.text = response["main"];
-                        geoLocation.text = response["coord"]["lon"]["lat"];
+                        location = response["name"];
+                        weather = response["main"];
+                        geoLocation = response["coord"]["lon"]["lat"];
                     }
                 }
             }
