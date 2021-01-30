@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rainParticles: {fileID: 8437041837673455835}
+  isRaining: 1
 --- !u!1 &7849403340282466978
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,7 +74,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7849403340282466978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.47, y: 0.63, z: 0}
+  m_LocalPosition: {x: -1.47, y: 0.63, z: 0.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4725268404429847774}
@@ -714,7 +715,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 8, y: 0.5, z: 2}
+    m_Scale: {x: 8, y: 0.5, z: 2.5}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -4971,7 +4972,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3c8ffc98e33b0e9409e8ec7429f60775,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.6095
+      value: -3.45
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c8ffc98e33b0e9409e8ec7429f60775,
         type: 3}
