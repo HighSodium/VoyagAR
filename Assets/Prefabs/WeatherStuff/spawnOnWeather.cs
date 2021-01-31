@@ -5,26 +5,40 @@ using UnityEngine;
 public class spawnOnWeather : MonoBehaviour
 {
     WeatherManager myWeather;
+    WeatherControl weatherC;
     public string CitySearch;
 
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        myWeather = GameObject.Find("WeatherManager").GetComponent<WeatherManager>();
+        GameObject manager = GameObject.Find("WeatherManager");
+        myWeather = manager.GetComponent<WeatherManager>();
+        weatherC = manager.GetComponent<WeatherControl>();
+
 
         myWeather.cityName = CitySearch;
 
-        myWeather.GetJsonData();
+        //myWeather.GetJsonData();
+        yield return StartCoroutine(GetCityData());
 
+        weatherC.spawnWeatherEmote(myWeather.weather);
         print(myWeather.location);
         print(myWeather.weather);
+        print(myWeather.geoLat);
+        print(myWeather.geoLon);
         print(myWeather.geoLocation);
         print("JOBS DONE!");
-    }
 
-    // Update is called once per frame
-    void Update()
+
+
+    }
+  
+
+    IEnumerator GetCityData()
     {
-        
+        myWeather.GetJsonData();
+        print("Searching for weather...");
+        yield return new WaitForSeconds(2);
+
     }
 }
