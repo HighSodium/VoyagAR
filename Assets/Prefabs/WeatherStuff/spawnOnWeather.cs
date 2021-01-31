@@ -22,6 +22,8 @@ public class spawnOnWeather : MonoBehaviour
         yield return StartCoroutine(GetCityData());
 
         weatherC.spawnWeatherEmote(myWeather.weather);
+
+
         print(myWeather.location);
         print(myWeather.weather);
         print(myWeather.geoLat);
