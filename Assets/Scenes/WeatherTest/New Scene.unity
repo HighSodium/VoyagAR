@@ -248,6 +248,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   location: 
   weather: 
+  geoLon: 0
+  geoLat: 0
   geoLocation: 
   cityName: 
 --- !u!4 &1429594382
@@ -276,7 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb862820aa8068c4a911cdcbe874fcf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CitySearch: --SEARCH HERE--
+  CitySearch: tegucigalpa
 --- !u!1 &1441647968
 GameObject:
   m_ObjectHideFlags: 0

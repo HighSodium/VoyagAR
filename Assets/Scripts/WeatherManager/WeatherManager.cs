@@ -15,6 +15,10 @@ public class WeatherManager : MonoBehaviour
     
     public string weather;
     //public TextMeshProUGUI geoLocation;
+    public float geoLon;
+
+    public float geoLat;
+
     public string geoLocation;
 
     //public TMP_InputField cityName; // User input in UI
@@ -54,8 +58,11 @@ public class WeatherManager : MonoBehaviour
                     else
                     {
                         location = jsonData["name"];
-                        weather = jsonData["main"];
-                        geoLocation = jsonData["coord"]["lon"]["lat"];
+                        weather = jsonData["weather"][0]["main"];
+                        geoLon = jsonData["coord"]["lon"];
+                        geoLat= jsonData["coord"]["lat"];
+                        geoLocation = geoLat.ToString() + "," + geoLon.ToString();
+                        
                     }
                 }
             }
