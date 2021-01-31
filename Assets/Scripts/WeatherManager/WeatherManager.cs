@@ -22,7 +22,7 @@ public class WeatherManager : MonoBehaviour
     public string geoLocation;
 
     //public TMP_InputField cityName; // User input in UI
-    public string cityName;
+    public TMP_InputField cityName;
 
 
 
@@ -33,7 +33,7 @@ public class WeatherManager : MonoBehaviour
 
     public IEnumerator RequestWeatherData()
     {
-        string weatherAPI = "api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=16b632699a5b299cfd0723abf35b5b3a"; //cityName.text
+        string weatherAPI = "api.openweathermap.org/data/2.5/weather?q=" + cityName.text + "&appid=16b632699a5b299cfd0723abf35b5b3a"; //cityName.text
         print(weatherAPI);
 
         using (UnityWebRequest webData = UnityWebRequest.Get(weatherAPI))

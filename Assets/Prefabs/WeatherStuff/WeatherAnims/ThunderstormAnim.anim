@@ -69,7 +69,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Bolt
+    path: sunlight
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -124,7 +124,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: sunlight
+    path: Weather/Bolt
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -209,7 +209,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Bolt
+    path: sunlight
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -264,7 +264,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: sunlight
+    path: Weather/Bolt
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves: []

@@ -119,12 +119,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Scale.unity
     guid: 13ac91f677dc22f4ca320ef8ae727b68
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SimpleAR/SimpleAR.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
     path: Assets/Scenes/UX/SampleUXScene.unity
     guid: 3b42d67a72bbc4004bf713db0e312326
+  - enabled: 0
+    path: Assets/Scenes/WeatherTest/WeatherScene.unity
+    guid: 70ca3edac52558d4c86e5ccd34dc1e1d
+  - enabled: 1
+    path: Assets/Scenes/WeatherTest/WORKINGFinalScene.unity
+    guid: 6450ccedb81df4843865a54aff7e9da8
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f8ce26fe3bc69499b9be4b2378e97a94,
       type: 2}
