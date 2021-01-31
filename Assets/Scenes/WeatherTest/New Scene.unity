@@ -280,9 +280,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
   CitySearch: hollywood
 =======
   CitySearch: Kazan
+=======
+  CitySearch: Seattle
+>>>>>>> 932d7ed6d332599feeb74cad5b0df1ba3039de43
 --- !u!114 &1429594384
 MonoBehaviour:
   m_ObjectHideFlags: 0
